@@ -59,6 +59,7 @@
     const noBtn = document.getElementById("no");
     const yesBtn = document.getElementById("yes");
 
+    // NO button runs away
     noBtn.addEventListener("mouseover", () => {
       const x = Math.random() * (window.innerWidth - noBtn.clientWidth);
       const y = Math.random() * (window.innerHeight - noBtn.clientHeight);
@@ -66,6 +67,7 @@
       noBtn.style.top = `${y}px`;
     });
 
+    // YES button click
     yesBtn.addEventListener("click", () => {
       document.body.innerHTML = `
         <div style="
@@ -77,8 +79,11 @@
           color:white;
           font-family:'Comic Sans MS', cursive;
           text-align:center;
+          flex-direction:column;
+          padding: 20px;
         ">
-          <h1>YAYYY!! 💕🥰<br>You just made my day 💖</h1>
+          <h1 style="font-size:3em; margin-bottom:20px;">YAYYY!! 💕🥰</h1>
+          <p style="font-size:1.5em;">You just made my day! 💖</p>
         </div>
       `;
     });
